@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+body{
+    background-color: #56bae6;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+#dateAndTime{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+    font-weight: 700;
+    text-align: center;
+}
+#clock{
+    font-size: 70px;
+}
+#date{
+    font-size: 40px;
+}
+#day{
+    font-size: 25px;
+}
+@media screen and (max-width:464px) {
+    #clock{
+        font-size: 25px;
+    }
+    #date{
+        font-size: 20px;
+    }
+    #day{
+        font-size: 15px;
+    }
+}

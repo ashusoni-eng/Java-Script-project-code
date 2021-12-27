@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #56baed;
+}
+.playerSelection, .game, .congrats{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+    transition: all 0.3s ease;   
+}
+.playerSelection{
+    background-color: #fff;
+    text-align: center;
+    padding: 50px;
+    border-radius: 10px;
+    /* display: none; */
+}
+.selectPlayer{
+    font-size: 25px;
+    font-weight: bold;
+}
+.playerSelection button{
+    background-color: #56baed;
+    border: none;
+    outline: none;
+    padding: 15px;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 10px;
+    letter-spacing: 2px;
+}
+.playerSelection.hide{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.playerSelection.hide.show{
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.game{
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.game.show{
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+.turn{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #56baed;
+    font-size: 25px;
+}
+.gamegrid{
+    display: grid;
+    grid-template-columns: repeat(3, 15vh);
+    grid-template-rows: repeat(3, 15vh);
+    margin-top: 20px;
+}
+.gamegrid div{
+    background-color: #fff;
+    margin: 4px;
+    text-align: center;
+    line-height: 90px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.boxtext{
+    color: #56baed;
+    font-size: 6vw;
+    font-weight: bold;
+}
+.congrats{
+    text-align: center;
+    background-color: #fff;
+    padding: 50px 70px;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+.congrats.show{
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%) scale(1);
+}
+.congrats h1{
+    color: #56baed;
+}
+.imgBox img{
+    width: 140px;
+}
+.restart{
+    padding: 10px 30px;
+    margin: 30px 40px;
+    background-color: #56baed;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.musicControl img{
+    color: #fff;
+    margin: 20px 20px;
+}
+.musicControlBtn{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 650px){
+    .boxtext{
+        font-size:60px;
+    }
+}
